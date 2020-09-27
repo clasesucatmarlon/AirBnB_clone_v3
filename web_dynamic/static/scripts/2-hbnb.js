@@ -17,15 +17,15 @@ $(document).ready(function () {
   });
 
 
-let url = "http://0.0.0.0:5000/api/v1/status/";
+const url = "http://localhost:5001/api/v1/status/";
 
-$.get(url, function(body){
+$.getJSON(url, function(body){
     if (body.status === "OK")
     {
-      $('#api_status').addClass('available');
+      $('.api_status').addClass('available');
     }
     else
     {
-      $('#api_status').removeClass('available');
+      $('.api_status').removeClass('available');
     }
 });
